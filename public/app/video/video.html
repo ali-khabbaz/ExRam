@@ -1,0 +1,25 @@
+<div ng-controller="videoCtrl as vid">
+    <div class="selected_video">
+        <p>{{vid.current_video_address}}</p>
+        <p>{{vid.video_data.section_name}}</p>
+        <p>{{vid.video_data.video_name}}</p>
+        <video controls ng-if="vid.video_data_load">
+            <source src="{{vid.current_video_address}}" type="video/mp4" />
+            <p>your browser not support</p>
+        </video>
+    </div>
+    <div class="same_section">
+        <h2>Videos in this section :</h2>
+        <hr>
+        <a ng-repeat="info in vid.sec_list_data" ng-if="info.video_id != vid.parameter.vid_id" href="/#/video/{{info.article_id}}/{{info.section_id}}/{{info.video_id}}">
+            <p>{{info.video_id}}:{{info.video_name}}</p>
+        </a>
+    </div>
+    <div class="sections">
+        <h2>List of sections :</h2>
+        <hr>
+        <a ng-repeat="info in vid.sections_data" ng-if="info.setion_id != vid.parameter.sec_id" href="/#/video/{{info.article_id}}/{{info.section_id}}/1">
+            <p>{{info.section_id}}:{{info.section_name}}</p>
+        </a>
+    </div>
+</div>
