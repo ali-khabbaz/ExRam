@@ -5,6 +5,8 @@ require.config({
 		'app': 'app',
 		'angular': '../vendor/angular/angular.min',
 		'angular-route': '../vendor/angular-route/angular-route.min',
+		'angular-touch': '../vendor/angular/angular-touch.min',
+		'angular-animate': '../vendor/angular/angular-animate.min',
 		'jquery': '../vendor/jquery/dist/jquery.min',
 		'nanoscroller': '../vendor/jquery.nanoscroller/nanoscroller',
 		'angular-resource': '../vendor/angular-resource/angular-resource.min',
@@ -40,10 +42,17 @@ require.config({
 				'crypto', 'mtproto', 'mtprotoWrapper', 'jsbn', 'i18n', 'filters', 'rusha',
 				'utils', 'binUtils', 'tlUtils', 'ngUtils', 'ui-bootstrap', 'services',
 				'polyfill', 'angular-sanitize', 'messages_manager', 'gunzip', 'directives',
-				'messages_manager', 'message_composer', 'nanoscroller'
+				'messages_manager', 'message_composer', 'nanoscroller', 'angular-touch',
+				'angular-animate'
 			]
 		},
 		'angular-route': {
+			deps: ['angular']
+		},
+		'angular-touch': {
+			deps: ['angular']
+		},
+		'angular-animate': {
 			deps: ['angular']
 		},
 		'angular-resource': {
@@ -71,7 +80,7 @@ require.config({
 			deps: ['crypto']
 		},
 		'ui-bootstrap': {
-			deps: ['angular']
+			deps: ['angular', 'angular-touch', 'angular-animate']
 		},
 		'filters': {
 			deps: ['i18n']
@@ -80,7 +89,7 @@ require.config({
 			deps: ['i18n', 'filters']
 		},
 		'services': {
-			deps: ['i18n', 'ngUtils', 'angular', 'angular-sanitize']
+			deps: ['i18n', 'ngUtils', 'angular', 'angular-sanitize', 'ui-bootstrap']
 		},
 		'messages_manager': {
 			deps: ['i18n', 'ngUtils', 'angular', 'angular-sanitize', 'services']

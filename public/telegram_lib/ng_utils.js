@@ -859,7 +859,7 @@ angular.module('izhukov.utils', [])
 	}
 
 	if (window.Worker) {
-		var tmpWorker = new Worker('js/lib/crypto_worker.js');
+		var tmpWorker = new Worker('/telegram_lib/crypto_worker.js');
 		tmpWorker.onmessage = function (e) {
 			if (!webWorker) {
 				webWorker = tmpWorker;

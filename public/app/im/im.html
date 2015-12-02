@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="im_history_col_wrap noselect">
+    <div class="im_history_col_wrap noselect">
         <div ng-show="state.notSelected" ng-switch="isEmpty.contacts &amp;&amp; isEmpty.dialogs">
             <div ng-switch-when="true" class="im_history_no_dialogs_wrap">
                 <h3 class="im_dialogs_empty_header" my-i18n="im_get_started"></h3>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="im_send_panel_wrap" ng-show="!historyState.actions()">
                         <div class="im_send_form_wrap1">
-                            <div class="im_send_form_wrap clearfix" ng-controller="AppImSendController" ng-class="{im_send_reply_form_wrap: draftMessage.replyToMessage != null}">
+                            <div class="im_send_form_wrap clearfix" ng-class="{im_send_reply_form_wrap: draftMessage.replyToMessage != null}">
                                 <a class="pull-right im_panel_peer_photo" my-peer-photolink="historyPeer.id" img-class="im_panel_peer_photo" watch="true" ng-show="!draftMessage.isBroadcast">
                     <i class="icon im_panel_peer_online" ng-show="historyPeer.id > 0 &amp;&amp; historyPeer.data.status._ == 'userStatusOnline'"></i>
                   </a>
@@ -188,5 +188,5 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>

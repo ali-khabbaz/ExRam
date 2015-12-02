@@ -1,8 +1,18 @@
 define(['routes', 'dependencyResolverFor'], function (routes, dependencyResolverFor) {
 	'use strict';
-	var app = angular.module('app', ['ngRoute', 'satellizer', 'izhukov.utils', 'izhukov.mtproto',
-		'izhukov.mtproto.wrapper', 'ui.bootstrap', 'myApp.services', 'myApp.filters', 'myApp.i18n',
-		'ngSanitize', 'myApp.directives',
+	var app = angular.module('app', [
+		'ngRoute',
+		'ngSanitize',
+		'satellizer',
+		'ngTouch',
+		'ui.bootstrap',
+		'izhukov.utils',
+		'izhukov.mtproto',
+		'izhukov.mtproto.wrapper',
+		'myApp.services',
+		'myApp.filters',
+		'myApp.i18n',
+		'myApp.directives',
 	]);
 	app.config(
 		[

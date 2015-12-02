@@ -375,7 +375,7 @@ angular.module('myApp.services', ['myApp.i18n', 'izhukov.utils'])
 			angular.forEach(userIDs, function (userID) {
 				onContactUpdated(userID, false);
 			});
-		})
+		});
 	}
 
 	function onContactUpdated(userID, isContact) {
@@ -3151,10 +3151,7 @@ angular.module('myApp.services', ['myApp.i18n', 'izhukov.utils'])
 	}
 
 	function setFavicon(href) {
-		console.log('href----------', href);
 		href = href || 'favicon.ico';
-		console.log('href----second------', href, prevFavicon);
-		//prevFavicon = 'favicon.ico';
 		if (prevFavicon === href) {
 			return
 		}
