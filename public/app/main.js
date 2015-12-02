@@ -104,7 +104,7 @@ require.config({
 			deps: ['angular']
 		},
 		'i18n': {
-			deps: ['angular', 'ngUtils']
+			deps: ['angular', 'ngUtils', 'config']
 		},
 		'mtprotoWrapper': {
 			deps: ['angular', 'mtproto', 'ngUtils', 'i18n']

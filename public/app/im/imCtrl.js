@@ -11,7 +11,7 @@
 			'LayoutSwitchService', 'LocationParamsService', 'AppStickersManager',
 			'ApiUpdatesManager', 'PeersSelectService', 'IdleManager', 'StatusManager',
 			'NotificationsManager', 'Storage', 'AppDocsManager', 'MtpApiFileManager',
-		'RichTextProcessor', '$modalInstance', 'AppPhotosManager', 'AppWebPagesManager'
+		'RichTextProcessor', /*'$modalInstance',*/ 'AppPhotosManager', 'AppWebPagesManager'
 		];
 
 		function imCtrl($scope, $location, $q, $timeout, $routeParams,
@@ -21,7 +21,7 @@
 			ChangelogNotifyService, HttpsMigrateService, LayoutSwitchService, LocationParamsService,
 			AppStickersManager, ApiUpdatesManager, PeersSelectService, IdleManager, StatusManager,
 			NotificationsManager, Storage, AppDocsManager, MtpApiFileManager, RichTextProcessor,
-		$modalInstance, AppPhotosManager, AppWebPagesManager) {
+			/*$modalInstance,*/ AppPhotosManager, AppWebPagesManager) {
 
 			/*
 			($q, $scope, $rootScope,
