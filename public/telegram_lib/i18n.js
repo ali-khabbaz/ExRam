@@ -65,7 +65,7 @@ angular.module('myApp.i18n', ['izhukov.utils'])
 				}
 			}
 
-			return msgstr;
+		return msgstr;
 		}
 
 		_.locale = function () {
@@ -104,7 +104,6 @@ angular.module('myApp.i18n', ['izhukov.utils'])
 	return {
 		restrict: 'EA',
 		compile: function (element) {
-			console.log('------iiiiiiiiiii-------------', element);
 			var params = element.children('my-i18n-param:not([name]), [my-i18n-param=""]:not([name])').map(function (index, param) {
 				return param.outerHTML;
 			}).toArray();

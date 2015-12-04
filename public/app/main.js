@@ -43,11 +43,14 @@ require.config({
 				'utils', 'binUtils', 'tlUtils', 'ngUtils', 'ui-bootstrap', 'services',
 				'polyfill', 'angular-sanitize', 'messages_manager', 'gunzip', 'directives',
 				'messages_manager', 'message_composer', 'nanoscroller', 'angular-touch',
-				'angular-animate'
+				'angular-animate', 'jquery'
 			]
 		},
 		'angular-route': {
 			deps: ['angular']
+		},
+		'angular': {
+			deps: ['jquery']
 		},
 		'angular-touch': {
 			deps: ['angular']
@@ -68,10 +71,10 @@ require.config({
 			deps: ['jquery']
 		},
 		'nanoscroller': {
-			deps: ['jquery']
+			deps: ['jquery', 'init', 'config', 'polyfill']
 		},
 		'init': {
-			deps: ['config']
+			deps: ['config', 'jquery', 'angular']
 		},
 		'crypto': {
 			deps: ['angular']
@@ -104,13 +107,16 @@ require.config({
 			deps: ['angular']
 		},
 		'i18n': {
-			deps: ['angular', 'ngUtils', 'config']
+			deps: ['angular', 'ngUtils', 'config', 'init', 'binUtils', 'utils', 'angular-touch']
 		},
 		'mtprotoWrapper': {
 			deps: ['angular', 'mtproto', 'ngUtils', 'i18n']
 		},
 		'binUtils': {
 			deps: ['utils']
+		},
+		'utils': {
+			deps: ['angular']
 		},
 		'gunzip': {
 			deps: ['binUtils']
